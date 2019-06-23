@@ -6,7 +6,7 @@
 lib文件夹中，文件加载顺序
 [Public, Package, [Http, XHR, App, Route]]
 
-文件描述
+## 文件描述 ##
 	Package.js 	保存client/server的数据、调用方法
 	Http.js 	http类，用来创建服务器
 	XHR.js 		自定义的网络请求对象，用来配合Http.js模拟服务端交互
@@ -14,7 +14,7 @@ lib文件夹中，文件加载顺序
 	Route.js 	路由处理
 	Public.js 	一些通用的工具方法
 
-例子：
+## 例子：##
 	1. 首先我们要确保js的引用顺序
 		<script src="./lib/Public.js"></script>
 		<script src="./lib/Package.js"></script>
@@ -25,7 +25,7 @@ lib文件夹中，文件加载顺序
 	2. 创建一个server.js并引用
 		<script src="./server.js"></script>
 		
-		#file server.js
+		file server.js
 			var http = new Http();
 			var app = new App();
 			var route = new Route();
@@ -50,7 +50,7 @@ lib文件夹中，文件加载顺序
 			new XHR(option, callback)
 		}
 
-		#调用
-			Ajax('/user', function (res) {
-				console.log(res);
-			})
+	4. 调用
+		Ajax('/user', function (res) {
+			console.log(res);
+		})
