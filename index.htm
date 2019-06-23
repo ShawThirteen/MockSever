@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>index</title>
+</head>
+<body>
+<script src="./lib/Public.js"></script>
+<script src="./lib/Package.js"></script>
+<script src="./lib/XHR.js"></script>
+<script src="./lib/Http.js"></script>
+<script src="./lib/App.js"></script>
+<script src="./lib/Route.js"></script>
+<script src="./server.js"></script>
+<script>
+
+function Ajax (url, callback, options) {
+	var option = {
+		url: url,
+		ip: '172.0.0.1',
+		...options
+	}
+	new XHR(option, callback)
+}
+
+Ajax('/user', function (res) {
+	console.log(res);
+})
+
+Ajax('/user', function (res) {
+	console.log(res);
+}, {
+	method: 'post',
+	data: {
+		a: 12
+	}
+})
+
+setTimeout(function () {
+	Ajax('/', function (res) {
+		console.log(res);
+	})
+}, 1000)
+
+</script>
+</body>
+</html>
