@@ -1,4 +1,4 @@
-## Mock Sever ##
+## Mock Server ##
 
 用javascript来模拟Node.js的实现
 本例的实现，完全由web控制，无需创建真实服务器
